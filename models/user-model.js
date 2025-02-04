@@ -1,7 +1,7 @@
 const { type } = require('express/lib/response');
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://127.0.0.1:27017/backend project");
+mongoose.connect("mongodb://127.0.0.1:27017/backend-project");
 
 const userSchema = mongoose.Schema({
     fullname: String,
@@ -11,7 +11,7 @@ const userSchema = mongoose.Schema({
         type: Array,
         default: [],
     },
-    isadmin: Boolean,
+   
     orders: {
         type: Array,
         deafault: [],

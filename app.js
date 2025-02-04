@@ -7,6 +7,8 @@ const ownerRouter = require("./routes/ownerRouter");
 const userRouter = require("./routes/userRouter");
 const productsRouter = require("./routes/productsRouter");
 
+require("dotenv").config();
+
 const db = require("./config/mongoose-connections");
 
 app.use(express.json());
@@ -17,7 +19,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
-app.use("/owner", ownerRouter);
+app.use("/owners", ownerRouter);
 app.use("/user", userRouter);
 app.use("/products", productsRouter);
 

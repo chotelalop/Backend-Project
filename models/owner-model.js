@@ -1,9 +1,9 @@
 const { type } = require('express/lib/response');
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://127.0.0.1:27017/backend project");
+mongoose.connect("mongodb://127.0.0.1:27017/backend-project");
 
-const userSchema = mongoose.Schema({
+const ownerSchema = mongoose.Schema({
     fullname: String,
     email : String,
     password: String,
@@ -16,4 +16,5 @@ const userSchema = mongoose.Schema({
     contact: Number,
     picture: String,
 });
-module.exports = mongoose.model("owner",ownerSchema);
+
+module.exports = mongoose.model("owner", ownerSchema);
